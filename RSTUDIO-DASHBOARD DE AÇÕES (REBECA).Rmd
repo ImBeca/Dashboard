@@ -1,0 +1,52 @@
+---
+title: "Suas Ações"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: scroll
+    runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+
+
+```{r}
+selectInput(
+  "acao", label = "Escolha sua ação",
+  choices = c(
+    "MGLU3", "NTCO3", "LREN3", "BIDI4", "CVCB3", "RADL3", "SBSP3", "EGIE3", "CPFE3", "RUMO"
+  ))
+selectInput(
+  "periodo", label = "Escolha o peíodo",
+  choices = c("1Y", "5Y", "10Y", "25Y")
+)
+
+```
+
+Row {data-width=500}
+-----------------------------------------------------------------------
+
+### Tendência
+
+```{r}
+
+```
+
+### Todas as tendências
+
+```{r}
+
+```
+
+Row {data-width=500}
+-----------------------------------------------------------------------
+### Cotações
+````{r}
+
+````
